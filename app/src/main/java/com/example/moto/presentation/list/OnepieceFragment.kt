@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +27,7 @@ class OnepieceFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private val adapter = OnepieceAdapter(listOf(), ::onClickedOnepiece)
+private val viewModel: OnepieceListViewModel by viewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -43,24 +46,9 @@ class OnepieceFragment : Fragment() {
             adapter = this@OnepieceFragment.adapter
         }
 
-        Singletons.onepieceApi.getOnepieceList().enqueue(object : Callback<OnepieceListResponse> {
-            override fun onResponse(call: Call<OnepieceListResponse>, response: Response<OnepieceListResponse>) {
-                if (response.isSuccessful && response.body() != null) {
-                    val onepieceResponse = response.body()
-                    if (onepieceResponse != null) {
-                        showList(onepieceResponse.items)
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<OnepieceListResponse>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-
+        viewModel.onepieceList.observe(viewLifecycleOwner, Observer { list ->
+            adapter.updateList(list)
         })
-
-
-
 
     }
 
