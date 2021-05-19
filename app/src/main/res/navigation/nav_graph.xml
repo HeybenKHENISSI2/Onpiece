@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/OnepieceListFragment">
+
+    <fragment
+        android:id="@+id/OnepieceListFragment"
+        android:name="com.example.moto.presentation.list.OnepieceFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_onepiece_list">
+
+        <action
+            android:id="@+id/navigateToOnepieceDetailFragment"
+            app:destination="@id/OnepieceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OnepieceDetailFragment"
+        android:name="com.example.moto.presentation.detail.OnepieceDetailFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_onepiece_detail">
+        <argument
+            android:name="onepieceId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/navigateToOnepieceListFragment"
+            app:destination="@id/OnepieceListFragment" />
+    </fragment>
+</navigation>
