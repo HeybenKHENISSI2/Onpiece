@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -26,6 +29,8 @@ import retrofit2.Response
 class OnepieceFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var loader: ProgressBar
+    private lateinit var textViewError: TextView
     private val adapter = OnepieceAdapter(listOf(), ::onClickedOnepiece)
 private val viewModel: OnepieceListViewModel by viewModels()
 
@@ -41,13 +46,19 @@ private val viewModel: OnepieceListViewModel by viewModels()
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView = view.findViewById(R.id.onepiece_recyclerview)
+        loader = view.findViewById(R.id.onepiece_loader)
+        textViewError = view.findViewById(R.id.onepiece_error)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = this@OnepieceFragment.adapter
         }
 
-        viewModel.onepieceList.observe(viewLifecycleOwner, Observer { list ->
-            adapter.updateList(list)
+        viewModel.onepieceList.observe(viewLifecycleOwner, Observer { onepieceModel ->
+            loader.isVisible = onepieceModel is OnepieceLoader
+            textViewError.isVisible = onepieceModel is OnepieceError
+            if(onepieceModel is OnepieceSuccess) {
+                adapter.updateList(onepieceModel.onepieceList)
+            }
         })
 
     }
