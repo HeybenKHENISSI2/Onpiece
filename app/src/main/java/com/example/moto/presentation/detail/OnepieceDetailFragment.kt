@@ -1,11 +1,13 @@
 package com.example.moto.presentation.detail
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.moto.R
 import com.example.moto.presentation.Singletons
 import com.example.moto.presentation.api.OnepieceDetailResponse
@@ -13,13 +15,26 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class OnepieceDetailFragment : Fragment() {
-    private lateinit var textViewName: TextView
-    private lateinit var textViewCharacters: TextView
+    private lateinit var textViewSummary: TextView
+    private lateinit var textViewLink: TextView
+    private lateinit var textViewCharacter: TextView
+    private lateinit var imageView: ImageView
+
+
+    /*class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val imageView: ImageView
+        init {
+            imageView = view.findViewById(R.id.onepiece_img)
+        }
+    }*/
+
     override fun onCreateView(
+
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
@@ -29,8 +44,11 @@ class OnepieceDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        textViewName = view.findViewById(R.id.onepiece_detail_name)
-        textViewCharacters = view.findViewById(R.id.onepiece_detail_characters)
+        textViewSummary = view.findViewById(R.id.onepiece_detail_summary)
+        textViewLink = view.findViewById(R.id.onepiece_detail_link)
+        textViewCharacter = view.findViewById(R.id.onepiece_detail_characters)
+        imageView = view.findViewById(R.id.onepiece_detail_img)
+       // textViewlien = view.findViewById(R.id.onepiece_detail_characters)
        callApi()
       //  view.findViewById<Button>(R.id.button_second).setOnClickListener {
         //    findNavController().navigate(R.id.navigateToOnepieceListFragment)
@@ -53,10 +71,17 @@ class OnepieceDetailFragment : Fragment() {
                     response: Response<OnepieceDetailResponse>
             ) {
                 if(response.isSuccessful && response.body() != null){
-                    textViewName.text = response.body()!!.summary
-                    textViewCharacters.text = response.body()!!.characters
+                    textViewCharacter.text = response.body()!!.title
+                   // textViewSummary.text = response.body()!!.summary
+
+                    val yourArray: List<String> = response.body()!!.cover_images.split("|")
+                    //textViewCharacter.text = yourArray[1]
+                    Glide.with(this@OnepieceDetailFragment).load(yourArray[1]).into(imageView)
+                    textViewSummary.text = response.body()!!.summary
                 }
             }
         })
     }
+
+
 }

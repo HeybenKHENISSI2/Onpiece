@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 
 
-class OnepieceApplication : Application() {
+class OnepiecApplication : Application() {
     companion object {
         var context: Context? = null
     }

@@ -6,19 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".presentation.detail.OnepieceDetailFragment">
 
-    <TextView
-        android:id="@+id/onepiece_detail_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Bulbizarre"
-        app:layout_constraintVertical_bias="0.4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/onepiece_detail_characters"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <ImageView
+        android:id="@+id/onepiece_detail_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toTopOf="@+id/onepiece_detail_characters"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/onepiece_detail_summary"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/onepiece_detail_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/onepiece_detail_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Bulbizarre"

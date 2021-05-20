@@ -32,7 +32,7 @@ class OnepieceFragment : Fragment() {
     private lateinit var loader: ProgressBar
     private lateinit var textViewError: TextView
     private val adapter = OnepieceAdapter(listOf(), ::onClickedOnepiece)
-private val viewModel: OnepieceListViewModel by viewModels()
+    private val viewModel: OnepieceListViewModel by viewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -58,6 +58,7 @@ private val viewModel: OnepieceListViewModel by viewModels()
             textViewError.isVisible = onepieceModel is OnepieceError
             if(onepieceModel is OnepieceSuccess) {
                 adapter.updateList(onepieceModel.onepieceList)
+
             }
         })
 
