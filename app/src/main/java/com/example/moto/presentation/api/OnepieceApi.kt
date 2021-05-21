@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface OnepieceApi {
-    @GET("chapters")
+    @GET("chapters/all")
     fun getOnepieceList(): Call<OnepieceListResponse>
 
     @GET("chapters/{id}")

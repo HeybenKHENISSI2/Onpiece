@@ -73,10 +73,23 @@ class OnepieceDetailFragment : Fragment() {
                 if(response.isSuccessful && response.body() != null){
                     textViewCharacter.text = response.body()!!.title
                    // textViewSummary.text = response.body()!!.summary
+                    if(response.body()!!.cover_images.contains("|")){
+                        val yourArray: List<String> = response.body()!!.cover_images.split("|")
+                        if(yourArray[1].contains("http")){
+                            Glide.with(this@OnepieceDetailFragment).load(yourArray[1]).into(imageView)
+                        }else{
+                            Glide.with(this@OnepieceDetailFragment).load("https://onepiececover.com" + yourArray[1]).into(imageView)
+                        }
+                    }else{
+                        Glide.with(this@OnepieceDetailFragment).load("https://onepiececover.com" + response.body()!!.cover_images).into(imageView)
 
-                    val yourArray: List<String> = response.body()!!.cover_images.split("|")
+                    }
+
+
+
+                    //val yourArray: List<String> = response.body()!!.cover_images.split("|")
                     //textViewCharacter.text = yourArray[1]
-                    Glide.with(this@OnepieceDetailFragment).load(yourArray[1]).into(imageView)
+
                     textViewSummary.text = response.body()!!.summary
                 }
             }

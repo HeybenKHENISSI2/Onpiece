@@ -74,7 +74,7 @@ class OnepieceFragment : Fragment() {
 
     private fun onClickedOnepiece(id : Int) {
         findNavController().navigate(R.id.navigateToOnepieceDetailFragment, bundleOf(
-                "onepieceId" to (id + 1)
+                "onepieceId" to (985-id)
         ))
     }
 }
