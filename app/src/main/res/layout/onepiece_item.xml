@@ -5,34 +5,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="400dp"
     android:background="#D0E7FBFD">
-
-
-
 
 
     <ImageView
         android:id="@+id/onepiece_img"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="265dp"
+        android:layout_height="351dp"
+        android:layout_marginStart="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.51" />
 
     <TextView
         android:id="@+id/onepiece_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_width="134dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="136dp"
+        android:fontFamily="@font/onepiecefont"
+        android:textAlignment="center"
+        android:textColor="#452A2A"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/onepiece_img"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516"
+        app:layout_constraintVertical_bias="0.816"
         tools:text="Pikachu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
