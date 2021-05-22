@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.detail.OnepieceDetailFragment">
+    tools:context=".presentation.detail.OnepieceDetailFragment"
+    android:background="#D2BEAB">
 
 
     <TextView
@@ -12,6 +13,8 @@
         android:layout_width="408dp"
         android:layout_height="90dp"
         android:textAlignment="center"
+        android:fontFamily="@font/onepiecefont"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -23,7 +26,7 @@
         android:id="@+id/onepiece_detail_img"
         android:layout_width="411dp"
         android:layout_height="377dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="76dp"
 
 
         app:layout_constraintEnd_toEndOf="parent"

@@ -53,6 +53,7 @@ class OnepieceAdapter(private var dataSet: List<Onepiece>, var listener: ((Int) 
         viewHolder.itemView.setOnClickListener {
             listener?.invoke(position)
         }
+
         Glide
             .with(viewHolder.itemView.context)
             .load("https://i.pinimg.com/originals/c2/61/e7/c261e73fc24cd8b535bd9a6199bf44c7.png")
