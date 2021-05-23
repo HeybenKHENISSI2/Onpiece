@@ -1,6 +1,4 @@
-Bonjour,
-
-Avant de commencer, il faut savoir que l'API que j'ai choisi NE GERE PAS LE CASH. J'ai donc bien rentré le code du cash comme il faut, il fonctionne pour Pokemon, mais pas pour l'api que j'ai choisi.
+ # Avant de commencer, il faut savoir que l'API que j'ai choisi NE GERE PAS LE CASH. J'ai donc bien rentré le code du cash comme il faut, il fonctionne pour Pokemon, mais pas pour l'api que j'ai choisi.
 
 Voici une Application Mobile sur le thème de One piece.
 Vous pouvez y retrouver l'intégralité des Chapitres de Onepiece (du 1 jusqu'au 985).
