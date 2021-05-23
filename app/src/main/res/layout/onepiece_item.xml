@@ -6,8 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="400dp"
-    
-    android:background="#D0E7FBFD">
+
+    android:background="#2A000000">
 
 
     <ImageView

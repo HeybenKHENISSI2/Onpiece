@@ -32,6 +32,9 @@ class OnepieceFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var loader: ProgressBar
     private lateinit var textViewError: TextView
+    private lateinit var imgerror: ImageView
+    private lateinit var imgerror2: ImageView
+    private lateinit var imgLoader: ImageView
     private val adapter = OnepieceAdapter(listOf(), ::onClickedOnepiece)
 
     private val viewModel: OnepieceListViewModel by viewModels()
@@ -50,6 +53,9 @@ class OnepieceFragment : Fragment() {
         recyclerView = view.findViewById(R.id.onepiece_recyclerview)
         loader = view.findViewById(R.id.onepiece_loader)
         textViewError = view.findViewById(R.id.onepiece_error)
+        imgerror = view.findViewById(R.id.onepiece_error2)
+        imgerror2 = view.findViewById(R.id.onepiece_error3)
+        imgLoader = view.findViewById(R.id.onepiece_loader2)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = this@OnepieceFragment.adapter
@@ -57,7 +63,10 @@ class OnepieceFragment : Fragment() {
 
         viewModel.onepieceList.observe(viewLifecycleOwner, Observer { onepieceModel ->
             loader.isVisible = onepieceModel is OnepieceLoader
+            imgLoader.isVisible = onepieceModel is OnepieceLoader
             textViewError.isVisible = onepieceModel is OnepieceError
+            imgerror.isVisible = onepieceModel is OnepieceError
+            imgerror2.isVisible = onepieceModel is OnepieceError
             if(onepieceModel is OnepieceSuccess) {
                 adapter.updateList(onepieceModel.onepieceList)
 

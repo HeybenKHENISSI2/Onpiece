@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.list.OnepieceFragment"
-    android:background="@drawable/fondof">
+    android:background="@drawable/ocean2">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/onepiece_recyclerview"
@@ -29,6 +29,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.727" />
 
+    <ImageView
+        android:id="@+id/onepiece_loader2"
+        android:layout_width="369dp"
+        android:layout_height="380dp"
+        android:src="@drawable/onepiece"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+
+    <ImageView
+        android:id="@+id/onepiece_error3"
+        android:layout_width="490dp"
+        android:layout_height="750dp"
+        android:src="@drawable/noir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
 
     <TextView
         android:id="@+id/onepiece_error"
@@ -38,12 +62,26 @@
         android:text="@string/error_generic"
         android:textAlignment="center"
         android:textSize="50dp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.808" />
+
+    <ImageView
+        android:id="@+id/onepiece_error2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
