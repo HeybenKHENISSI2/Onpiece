@@ -1,6 +1,6 @@
-package com.example.moto.presentation.api
+package com.example.onepiece.presentation.api
 
-import com.example.moto.presentation.list.Onepiece
+import com.example.onepiece.presentation.list.Onepiece
 
 data class OnepieceListResponse(
        // val count: Int,

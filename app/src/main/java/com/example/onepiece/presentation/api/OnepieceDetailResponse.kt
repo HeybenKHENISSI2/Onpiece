@@ -1,4 +1,4 @@
-package com.example.moto.presentation.api
+package com.example.onepiece.presentation.api
 
 
 data class OnepieceDetailResponse(

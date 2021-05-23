@@ -1,10 +1,9 @@
-package com.example.moto.presentation.list
+package com.example.onepiece.presentation.list
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.moto.presentation.Singletons
-import com.example.moto.presentation.api.OnepieceListResponse
+import com.example.onepiece.presentation.Singletons
+import com.example.onepiece.presentation.api.OnepieceListResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

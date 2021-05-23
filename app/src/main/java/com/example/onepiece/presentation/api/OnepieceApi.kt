@@ -1,4 +1,4 @@
-package com.example.moto.presentation.api
+package com.example.onepiece.presentation.api
 
 import retrofit2.Call
 import retrofit2.http.GET

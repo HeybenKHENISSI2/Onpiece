@@ -1,4 +1,4 @@
-package com.example.moto.presentation.list
+package com.example.onepiece.presentation.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,13 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.moto.R
-import com.example.moto.presentation.Singletons
+import com.example.onepiece.R
+import com.example.onepiece.presentation.Singletons
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.moto.presentation.api.OnepieceDetailResponse
-import com.example.moto.presentation.detail.OnepieceDetailFragment
+import com.example.onepiece.presentation.api.OnepieceDetailResponse
 
 class OnepieceAdapter(private var dataSet: List<Onepiece>, var listener: ((Int) -> Unit)? = null) :
     RecyclerView.Adapter<OnepieceAdapter.ViewHolder>() {

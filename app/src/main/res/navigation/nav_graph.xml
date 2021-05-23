@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/OnepieceListFragment"
-        android:name="com.example.moto.presentation.list.OnepieceFragment"
+        android:name="com.example.onepiece.presentation.list.OnepieceFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_onepiece_list">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/OnepieceDetailFragment"
-        android:name="com.example.moto.presentation.detail.OnepieceDetailFragment"
+        android:name="com.example.onepiece.presentation.detail.OnepieceDetailFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_onepiece_detail">
         <argument

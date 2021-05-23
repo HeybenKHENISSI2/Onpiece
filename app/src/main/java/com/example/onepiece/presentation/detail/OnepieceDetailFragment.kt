@@ -1,4 +1,4 @@
-package com.example.moto.presentation.detail
+package com.example.onepiece.presentation.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.example.moto.R
-import com.example.moto.presentation.Singletons
-import com.example.moto.presentation.api.OnepieceDetailResponse
+import com.example.onepiece.R
+import com.example.onepiece.presentation.Singletons
+import com.example.onepiece.presentation.api.OnepieceDetailResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

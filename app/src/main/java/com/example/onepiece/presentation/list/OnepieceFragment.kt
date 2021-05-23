@@ -1,6 +1,5 @@
-package com.example.moto.presentation.list
+package com.example.onepiece.presentation.list
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,12 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.moto.R
-import com.example.moto.presentation.Singletons
-import com.example.moto.presentation.api.OnepieceListResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.onepiece.R
 
 
 /**

@@ -1,7 +1,7 @@
-package com.example.moto.presentation
+package com.example.onepiece.presentation
 
-import com.example.moto.presentation.OnepiecApplication.Companion.context
-import com.example.moto.presentation.api.OnepieceApi
+import com.example.onepiece.presentation.OnepiecApplication.Companion.context
+import com.example.onepiece.presentation.api.OnepieceApi
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
