@@ -1,7 +1,4 @@
-## Avant de commencer, il faut savoir que l'API que j'ai choisi 
-```diff 
-- NE GERE PAS LE CASH 
-```. J'ai donc bien rentré le code du cash comme il faut, il fonctionne pour Pokemon, mais pas pour l'api que j'ai choisi.
+## Avant de commencer, il faut savoir que l'API que j'ai choisi NE GERE PAS LE CASH . J'ai donc bien rentré le code du cash comme il faut, il fonctionne pour Pokemon, mais pas pour l'api que j'ai choisi.
 ```diff
 - gyujygu
 ```
@@ -12,4 +9,4 @@
 #### Comme ça, si vous n'avez pas le temps de tout lire pour rattraper One piece, il vous suffira de lire le synopsis de chaque chapitre.
 #### Il y aura prochainement des améliorations telle la mise en page de toutes les pages de chaque chapitre.
 #### Bonne lecture !
- ![#f03c15]huyhuyhuyh `#f03c15`
+
