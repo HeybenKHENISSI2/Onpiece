@@ -7,4 +7,7 @@
 #### Comme ça, si vous n'avez pas le temps de tout lire pour rattraper One piece, il vous suffira de lire le synopsis de chaque chapitre.
 #### Il y aura prochainement des améliorations telle la mise en page de toutes les pages de chaque chapitre.
 #### Bonne lecture !
+```diff
+@@ KHENISSI Heyben Classe 32 @@
+```
 
