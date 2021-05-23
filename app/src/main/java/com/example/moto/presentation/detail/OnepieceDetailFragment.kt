@@ -50,9 +50,6 @@ class OnepieceDetailFragment : Fragment() {
         imageView = view.findViewById(R.id.onepiece_detail_img)
        // textViewlien = view.findViewById(R.id.onepiece_detail_characters)
        callApi()
-      //  view.findViewById<Button>(R.id.button_second).setOnClickListener {
-        //    findNavController().navigate(R.id.navigateToOnepieceListFragment)
-      // }
     }
 
     private fun callApi() {

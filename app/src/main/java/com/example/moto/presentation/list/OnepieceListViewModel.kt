@@ -17,15 +17,14 @@ callApi()
 
     private fun callApi() {
         onepieceList.value = OnepieceLoader
-        onepieceList.value = OnepieceLoaderLogo
         Singletons.onepieceApi.getOnepieceList().enqueue(object : Callback<OnepieceListResponse> {
             override fun onResponse(call: Call<OnepieceListResponse>, response: Response<OnepieceListResponse>) {
                 if (response.isSuccessful && response.body() != null) {
-                    val onepieceResponse = response.body()
-                    if (onepieceResponse != null) {
+                    val onepieceResponse = response.body()!!
+                   // if (onepieceResponse != null) {
                         onepieceList.value= OnepieceSuccess(onepieceResponse.items)
-                    }
-                    else{
+                   // }
+                    if (onepieceResponse == null){
                         onepieceList.value= OnepieceError
                     }
                 }

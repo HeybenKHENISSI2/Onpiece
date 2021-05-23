@@ -32,8 +32,8 @@ class OnepieceFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var loader: ProgressBar
     private lateinit var textViewError: TextView
-    private lateinit var imageView: ImageView
     private val adapter = OnepieceAdapter(listOf(), ::onClickedOnepiece)
+
     private val viewModel: OnepieceListViewModel by viewModels()
 
     override fun onCreateView(
@@ -48,7 +48,6 @@ class OnepieceFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView = view.findViewById(R.id.onepiece_recyclerview)
-        imageView = view.findViewById(R.id.onepiece_logo)
         loader = view.findViewById(R.id.onepiece_loader)
         textViewError = view.findViewById(R.id.onepiece_error)
         recyclerView.apply {
@@ -57,7 +56,6 @@ class OnepieceFragment : Fragment() {
         }
 
         viewModel.onepieceList.observe(viewLifecycleOwner, Observer { onepieceModel ->
-            imageView.isVisible = onepieceModel is OnepieceLoaderLogo
             loader.isVisible = onepieceModel is OnepieceLoader
             textViewError.isVisible = onepieceModel is OnepieceError
             if(onepieceModel is OnepieceSuccess) {
